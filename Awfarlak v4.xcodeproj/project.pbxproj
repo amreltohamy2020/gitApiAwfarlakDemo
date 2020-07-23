@@ -53,6 +53,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA360CB624C950CC00B4D23F /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A4F824C643CA00E331E9 /* CatagoryCollectionViewCell.swift */,
+				FA37A4F224C6289A00E331E9 /* CataegoriesCollectionViewCell.swift */,
+				FAF5674B24C71D39005F765C /* ProductsCollectionViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		FA360CB724C950F800B4D23F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A4E224C624D100E331E9 /* ViewController.swift */,
+				FA37A4F624C63C7000E331E9 /* CategoryViewController.swift */,
+				FAF5674924C715C2005F765C /* AllProductsViewController.swift */,
+				FA360CB424C94CCF00B4D23F /* ProductViewController.swift */,
+				FA360CB624C950CC00B4D23F /* cells */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		FA360CB824C9512E00B4D23F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA37A4DE24C624D100E331E9 /* AppDelegate.swift */,
+				FA37A4E024C624D100E331E9 /* SceneDelegate.swift */,
+				FA37A4F424C6293C00E331E9 /* APIManager.swift */,
+				FA37A4FA24C6463100E331E9 /* JSONCodable.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FA37A4D224C624D100E331E9 = {
 			isa = PBXGroup;
 			children = (
@@ -72,21 +105,12 @@
 		FA37A4DD24C624D100E331E9 /* Awfarlak v4 */ = {
 			isa = PBXGroup;
 			children = (
-				FA37A4DE24C624D100E331E9 /* AppDelegate.swift */,
-				FA37A4E024C624D100E331E9 /* SceneDelegate.swift */,
-				FA37A4F424C6293C00E331E9 /* APIManager.swift */,
-				FA37A4FA24C6463100E331E9 /* JSONCodable.swift */,
+				FA360CB824C9512E00B4D23F /* Model */,
+				FA360CB724C950F800B4D23F /* controllers */,
 				FA37A4E424C624D100E331E9 /* Main.storyboard */,
 				FA37A4E724C624D300E331E9 /* Assets.xcassets */,
 				FA37A4E924C624D300E331E9 /* LaunchScreen.storyboard */,
 				FA37A4EC24C624D300E331E9 /* Info.plist */,
-				FA37A4E224C624D100E331E9 /* ViewController.swift */,
-				FA37A4F624C63C7000E331E9 /* CategoryViewController.swift */,
-				FAF5674924C715C2005F765C /* AllProductsViewController.swift */,
-				FA360CB424C94CCF00B4D23F /* ProductViewController.swift */,
-				FA37A4F224C6289A00E331E9 /* CataegoriesCollectionViewCell.swift */,
-				FA37A4F824C643CA00E331E9 /* CatagoryCollectionViewCell.swift */,
-				FAF5674B24C71D39005F765C /* ProductsCollectionViewCell.swift */,
 			);
 			path = "Awfarlak v4";
 			sourceTree = "<group>";
