@@ -72,6 +72,9 @@ extension AllProductsViewController : UICollectionViewDelegate , UICollectionVie
         
         
         print("show single product view controller")
+        var vc = self.storyboard?.instantiateViewController(withIdentifier: "productViewController") as! ProductViewController
+        vc.title = allProducts[indexPath.row].title
+               self.navigationController?.pushViewController(vc, animated: true)
         
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA360CB524C94CCF00B4D23F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA360CB424C94CCF00B4D23F /* ProductViewController.swift */; };
 		FA37A4DF24C624D100E331E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A4DE24C624D100E331E9 /* AppDelegate.swift */; };
 		FA37A4E124C624D100E331E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A4E024C624D100E331E9 /* SceneDelegate.swift */; };
 		FA37A4E324C624D100E331E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37A4E224C624D100E331E9 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA360CB424C94CCF00B4D23F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		FA37A4DB24C624D100E331E9 /* Awfarlak v4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awfarlak v4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37A4DE24C624D100E331E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA37A4E024C624D100E331E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				FA37A4E224C624D100E331E9 /* ViewController.swift */,
 				FA37A4F624C63C7000E331E9 /* CategoryViewController.swift */,
 				FAF5674924C715C2005F765C /* AllProductsViewController.swift */,
+				FA360CB424C94CCF00B4D23F /* ProductViewController.swift */,
 				FA37A4F224C6289A00E331E9 /* CataegoriesCollectionViewCell.swift */,
 				FA37A4F824C643CA00E331E9 /* CatagoryCollectionViewCell.swift */,
 				FAF5674B24C71D39005F765C /* ProductsCollectionViewCell.swift */,
@@ -162,6 +165,7 @@
 				FAF5674A24C715C2005F765C /* AllProductsViewController.swift in Sources */,
 				FA37A4FB24C6463100E331E9 /* JSONCodable.swift in Sources */,
 				FA37A4F324C6289A00E331E9 /* CataegoriesCollectionViewCell.swift in Sources */,
+				FA360CB524C94CCF00B4D23F /* ProductViewController.swift in Sources */,
 				FA37A4E324C624D100E331E9 /* ViewController.swift in Sources */,
 				FA37A4F524C6293C00E331E9 /* APIManager.swift in Sources */,
 				FA37A4DF24C624D100E331E9 /* AppDelegate.swift in Sources */,
