@@ -25,6 +25,9 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
     @IBOutlet weak var addToCartButtonOutlet: UIButton!
     
     //   @IBOutlet weak var addToCatrButton: UIButton!
+    
+    @IBOutlet weak var productSamplePageControl: UIPageControl!
+    
     //   @IBOutlet weak var callButton: UIButton!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -82,6 +85,7 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
          DispatchQueue.main.async {
             self.priceLabel.text = product.price_after_discount
             self.productNameLabel.text = product.description
+            self.productSamplePageControl.numberOfPages = productImageSamplesString.count
         
         
         
@@ -115,6 +119,7 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
         self.priceLabel.round(corners: [.topRight,.bottomRight], cornerRadius: 20)
         self.addToCartButtonOutlet.round(corners: [.topRight,.bottomRight], cornerRadius: 15)
         self.callButtonOutlet.round(corners: [.topLeft,.bottomLeft], cornerRadius: 15)
+        
         
     }
     
@@ -170,17 +175,17 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productViewCell", for: indexPath) as? ProductViewSamplesCollectionViewCell
         cell?.productSamplesImageView.image = productImageSamples[indexPath.row]
         print("iam in cell and data added")
+        DispatchQueue.main.async {
+            self.productSamplePageControl.currentPage = indexPath.row
+        }
         return cell!
     }
-    
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //        return CGSize(width: 300, height: 300)
-    //    }
     
 }
 
 
-
+// for rounding single corner
+// source:- https://www.swiftdevcenter.com/uiview-round-specific-corners-only-swift/
 extension UIView {
     
     func round(corners: UIRectCorner, cornerRadius: Double) {
