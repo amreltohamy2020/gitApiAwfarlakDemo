@@ -16,6 +16,8 @@ class CataegoriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cataegoryName: UILabel!
   
     
+  //  @IBOutlet weak var testCatNameLabel: UILabel!
+    
     public func setCataegoriesCell(_ cat:Categories){
         cataegoryName.text = cat.name
         

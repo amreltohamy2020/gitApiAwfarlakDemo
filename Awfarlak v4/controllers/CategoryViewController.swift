@@ -90,8 +90,9 @@ extension CategoryViewController:UICollectionViewDelegate , UICollectionViewData
         
         // goto the products view controller
         print("go to productus view")
-        var vc = self.storyboard?.instantiateViewController(withIdentifier: "AllProductsViewController") as! AllProductsViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AllProductsViewController") as! AllProductsViewController
         vc.title = subCataegory[indexPath.row].name
+        vc.destinationUrl = ""//pass url to the view controller
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

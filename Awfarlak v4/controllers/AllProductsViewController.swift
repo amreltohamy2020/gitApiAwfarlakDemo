@@ -10,8 +10,9 @@ import UIKit
 
 class AllProductsViewController: UIViewController {
 
+    
     var allProducts = [Product]()
-    public let destinationUrl:String = ""
+    public var destinationUrl:String = ""
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -72,7 +73,7 @@ extension AllProductsViewController : UICollectionViewDelegate , UICollectionVie
         
         
         print("show single product view controller")
-        var vc = self.storyboard?.instantiateViewController(withIdentifier: "productViewController") as! ProductViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "productViewController") as! ProductViewController
         vc.title = allProducts[indexPath.row].title
                self.navigationController?.pushViewController(vc, animated: true)
         

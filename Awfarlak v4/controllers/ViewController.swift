@@ -70,7 +70,7 @@ extension ViewController : UICollectionViewDelegate , UICollectionViewDataSource
       //  vc.title = allCatageories[indexPath.row].name
      //   navigationController?.pushViewController(vc, animated: true)
         
-        var vc = self.storyboard?.instantiateViewController(withIdentifier: "subCataegoryViewController") as! CategoryViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "subCataegoryViewController") as! CategoryViewController
         vc.url = allCatageories[indexPath.row].adv
         vc.title = allCatageories[indexPath.row].name
         self.navigationController?.pushViewController(vc, animated: true)

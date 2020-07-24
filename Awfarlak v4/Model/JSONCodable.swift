@@ -58,7 +58,7 @@ struct ProductDetails:Codable{
     let discount : String
     let rating : Int
     let quantity : Int
-    let colors : String
+    let colors : [String]
     let comments : [Comment]
 
 }

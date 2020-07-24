@@ -14,9 +14,10 @@ class CatagoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var subCatLabel: UILabel!
     
+    
     public func setCataegoriesCell(_ cat:Categories){
          subCatLabel.text = cat.name
-        subCatImageView.layer.cornerRadius = 5
+        subCatImageView.layer.cornerRadius = 10
         
         
         APIManager.shared.downloadImage(stringUrl: cat.image) { (result) in

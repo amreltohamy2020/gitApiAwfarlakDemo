@@ -65,6 +65,29 @@ class APIManager {
          task.resume()
      }
     
+    public func getProductData(for url:URL,compilation:@escaping(Result<ProductDetails,Error>)->Void){
+        let session = URLSession.shared
+        let task = session.dataTask(with: url) { (data, response, error) in
+            guard error == nil , data != nil else {
+                print("error in task")
+                compilation(.failure(APIError.failedToGetData))
+                return
+            }
+            print("task sucess")
+            print(data)
+            let decoder = JSONDecoder()
+            do{
+                let productDetailes = try decoder.decode(ProductDetails.self, from: data!)
+                compilation(.success(productDetailes))
+            }catch{
+                print("error in decode")
+                compilation(.failure(APIError.failedToDecodeJSON))
+            }
+        }
+        task.resume()
+        
+    }
+    
     
     
     
