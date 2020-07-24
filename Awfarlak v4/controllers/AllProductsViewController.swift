@@ -36,6 +36,9 @@ class AllProductsViewController: UIViewController {
             case .success(let productsArray):
                 print("product array sucessfully here")
                 self.allProducts = productsArray
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }

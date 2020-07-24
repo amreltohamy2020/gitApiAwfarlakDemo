@@ -87,7 +87,7 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
             self.productNameLabel.text = product.description
             self.productSamplePageControl.numberOfPages = productImageSamplesString.count
         
-        
+        }
         
         
              for stringUrl in productImageSamplesString {
@@ -97,6 +97,9 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
                      case .success(let image):
                         print("sucess download image number\(self.productImageSamples.count)")
                          self.productImageSamples.append(image)
+                        DispatchQueue.main.async {
+                            self.collectionView.reloadData()
+                        }
                          
                      case .failure(let error):
                         print("error download image")
@@ -106,7 +109,7 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
                  print(stringUrl)
              }
         
-        }
+        
         
        
     }
@@ -158,8 +161,10 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
     }
     @IBAction func callButtonClicked(_ sender: Any) {
         
+        
     }
     @IBAction func adToCartButtonClicked(_ sender: Any) {
+        
         
     }
     
@@ -175,6 +180,7 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productViewCell", for: indexPath) as? ProductViewSamplesCollectionViewCell
         cell?.productSamplesImageView.image = productImageSamples[indexPath.row]
         print("iam in cell and data added")
+        // update page control
         DispatchQueue.main.async {
             self.productSamplePageControl.currentPage = indexPath.row
         }

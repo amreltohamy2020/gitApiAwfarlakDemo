@@ -32,6 +32,9 @@ class ViewController: UIViewController {
                      print(AllCatageories[0].name)
                     print(AllCatageories.count)
                      self.allCatageories = AllCatageories
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
                  case .failure(let error):
                      print(error.localizedDescription)
                 }

@@ -46,17 +46,20 @@ class CategoryViewController: UIViewController {
                 self.subCataegory = subCategories
                 print(self.subCataegory)
            
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             case .failure(let error):
                 print("error getting data")
                 print(error.localizedDescription)
             }
         }
         // Do any additional setup after loading the view.
-        collectionView.reloadData()
+       // collectionView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-          collectionView.reloadData()
+       
 
       }
 
