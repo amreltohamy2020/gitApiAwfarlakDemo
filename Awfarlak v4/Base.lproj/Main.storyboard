@@ -446,7 +446,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SbT-W0-s9X"/>
                                 </constraints>
@@ -552,13 +551,13 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vrm-Hy-Kq4">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="35"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="gLc-2Q-tME"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="phone.fill" catalog="system" backgroundImage="call"/>
+                                        <state key="normal" image="phone.fill" catalog="system"/>
                                         <connections>
                                             <action selector="callButtonClicked:" destination="Tnk-Cj-dgR" eventType="touchUpInside" id="Y8Q-7K-QOe"/>
                                         </connections>
@@ -572,10 +571,10 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wci-YM-ItJ">
                                         <rect key="frame" x="82" y="0.0" width="302" height="35"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="  Add To Cart" image="cart.fill.badge.plus" catalog="system" backgroundImage="add">
+                                        <state key="normal" title="  Add To Cart" image="cart.fill.badge.plus" catalog="system">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -624,6 +623,8 @@
                         <viewLayoutGuide key="safeArea" id="6cq-NP-D0x"/>
                     </view>
                     <connections>
+                        <outlet property="addToCartButtonOutlet" destination="Wci-YM-ItJ" id="zLF-UT-Mg2"/>
+                        <outlet property="callButtonOutlet" destination="Vrm-Hy-Kq4" id="YSy-bl-lQ4"/>
                         <outlet property="collectionView" destination="8Ce-3l-dXa" id="aFa-bT-mLK"/>
                         <outlet property="commentsButton" destination="Wkt-l6-9Sc" id="U0y-z0-cYa"/>
                         <outlet property="detailsButton" destination="nri-VQ-z26" id="bdc-6Z-rJz"/>
@@ -638,11 +639,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="201" height="35"/>
         <image name="austin" width="5230" height="3269"/>
         <image name="background_1" width="640" height="1136"/>
         <image name="bag.fill" catalog="system" width="128" height="128"/>
-        <image name="call" width="78" height="35"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="cart.fill.badge.plus" catalog="system" width="128" height="98"/>

@@ -21,6 +21,9 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
     @IBOutlet weak var detailsButton: UIButton!
     //buttons
     @IBOutlet weak var commentsButton: UIButton!
+    @IBOutlet weak var callButtonOutlet: UIButton!
+    @IBOutlet weak var addToCartButtonOutlet: UIButton!
+    
     //   @IBOutlet weak var addToCatrButton: UIButton!
     //   @IBOutlet weak var callButton: UIButton!
     
@@ -52,6 +55,7 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
         super.viewDidAppear(true)
         self.collectionView.reloadData()
     }
+   
     func apiConnection(){
         let stringUrl = "https://webdesign.be4em.info/awfarlkapi_ar/Product/productdetails/549834453/25598/703"
               
@@ -102,11 +106,16 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
         
        
     }
+    
+    
     func configureUIShapeAndColors(){
         //TODO:- add lables and buttons shapes
         detailsButton.layer.cornerRadius = 5
         commentsButton.layer.cornerRadius = 5
-        priceLabel.layer.cornerRadius = 10
+        self.priceLabel.round(corners: [.topRight,.bottomRight], cornerRadius: 20)
+        self.addToCartButtonOutlet.round(corners: [.topRight,.bottomRight], cornerRadius: 15)
+        self.callButtonOutlet.round(corners: [.topLeft,.bottomLeft], cornerRadius: 15)
+        
     }
     
     
@@ -168,4 +177,19 @@ class ProductViewController: UIViewController ,UICollectionViewDelegate , UIColl
     //        return CGSize(width: 300, height: 300)
     //    }
     
+}
+
+
+
+extension UIView {
+    
+    func round(corners: UIRectCorner, cornerRadius: Double) {
+        
+        let size = CGSize(width: cornerRadius, height: cornerRadius)
+        let bezierPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: size)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = self.bounds
+        shapeLayer.path = bezierPath.cgPath
+        self.layer.mask = shapeLayer
+    }
 }
